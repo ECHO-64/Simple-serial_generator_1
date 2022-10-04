@@ -1,0 +1,178 @@
+/* _________________ Start Variables _________________ */
+:root {
+  --primary-color: rgb(244, 67, 54);
+  --border-color: rgba(0, 0, 0, 0.15);
+}
+/* _________________ Start Global Rules _________________ */
+@font-face {
+  font-family: "RobotoMono";
+  src: url("./font/static/RobotoMono-Regular.ttf") format("truetype");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "RobotoMono";
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+/* _________________ Start All _________________ */
+.box {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 20px;
+  background-color: rgb(240, 240, 240);
+  box-shadow: inset 0 0 0 1px var(--border-color);
+  position: relative;
+}
+.box .head {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+.box .settings {
+  margin-bottom: 10px;
+}
+.box .settings div {
+  margin-bottom: 5px;
+}
+.settings div [type="checkbox"] {
+  display: none;
+}
+.settings div label {
+  user-select: none;
+  padding-left: 23px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+.settings div label::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border: 1px solid #bebebe;
+  background-color: #f7f7f7;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+.settings div label::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+.settings div label:hover::after {
+  background-color: rgba(244, 67, 54, 0.4);
+}
+.settings div input.change + label {
+  color: var(--primary-color);
+}
+.settings div input.change + label::after {
+  background-color: var(--primary-color);
+}
+.box .settings p {
+  margin: 10px 0;
+  font-weight: bold;
+}
+.box .settings #serialCount {
+  padding: 5px;
+  max-width: 90px;
+  border: 1px solid var(--border-color);
+  outline: none;
+  text-align: center;
+  font-size: 17px;
+  background-color: #f7f7f7;
+}
+.box .settings #serialCount::-webkit-inner-spin-button,
+.box .settings #serialCount::-webkit-outer-spin-button {
+  display: none;
+}
+.box .button {
+  display: block;
+  background-color: rgb(225, 225, 225);
+  border: 1px solid var(--border-color);
+  outline: none;
+  padding: 8px 0;
+  margin-top: 10px;
+  font-size: 15px;
+  min-width: 90px;
+  cursor: pointer;
+}
+.box .button:hover {
+  background-color: rgba(244, 67, 54, 0.4);
+}
+.box .serialEl {
+  display: block;
+  height: 50px;
+  text-align: center;
+  padding: 5px 10px;
+  overflow: auto;
+  background-color: #f7f7f7;
+  border: 1px solid var(--border-color);
+}
+
+.box .restore {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}

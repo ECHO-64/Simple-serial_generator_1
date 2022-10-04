@@ -1,0 +1,56 @@
+<!--
+  - Thanks a lot to Eng: Osama Elzero
+  - Coded by ECHO
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ther's_No_Place_Like_127.0.0.1</title>
+    <!-- _________________ Favicon _________________ -->
+    <link
+      rel="shortcut icon"
+      href="styles&imgs/favicon/code.svg"
+      type="image/x-icon"
+    />
+    <!-- Main Style -->
+    <link rel="stylesheet" href="styles&imgs/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <p class="head">Serial And Password Generator</p>
+        <div class="settings">
+          <p>[1] Customize the serial</p>
+          <div>
+            <input type="checkbox" id="small" />
+            <label for="small">Small Letters [a-z]</label>
+          </div>
+          <div>
+            <input type="checkbox" id="numbers" />
+            <label for="numbers">Numbers [0-9]</label>
+          </div>
+          <div>
+            <input type="checkbox" id="big" />
+            <label for="big">Big letters [A-Z]</label>
+          </div>
+          <div>
+            <input type="checkbox" id="special" />
+            <label for="special">Special characters[!,@,$,#]</label>
+          </div>
+          <p>[2] Number of serial letters</p>
+          <input type="number" placeholder="number" id="serialCount" />
+          <button class="button generate">Generate</button>
+        </div>
+        <span class="serialEl"></span>
+        <button class="button copy">Copy</button>
+        <button class="button restore">Last serial</button>
+      </div>
+    </div>
+    <!-- _________________ javaScript _________________ -->
+    <!-- Main Script -->
+    <script src="Script.js"></script>
+  </body>
+</html>
